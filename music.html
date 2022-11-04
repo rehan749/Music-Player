@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    body {
+        background-color: rgb(148, 148, 209);
+        box-sizing: border-box;
+        font-family: sans-serif;
+    }
+
+    main {
+        display: grid;
+        place-items: center;
+        height: 550px;
+        width: 100%;
+    }
+
+    .music-body {
+        background-color: rgb(156, 152, 152);
+        height: 550px;
+        width: 400px;
+        border-radius: 10px;
+        box-shadow: 2px 7px 5px 4px black;
+        text-align: center;
+        margin-top: 100px;
+    }
+
+    .music-body #title {
+
+        text-shadow: 5px 5px 5px black;
+    }
+
+    .image {
+        height: 300px;
+        width: 300px;
+        margin: auto;
+    }
+
+    .image img {
+        margin: 10px 0px;
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+        box-shadow: 2px 10px 17px 8px black;
+        object-fit: cover;
+    }
+
+    .music-control-btn {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    .music-control-btn .fa-solid {
+        font-size: 35px;
+        cursor: pointer;
+        margin: auto;
+    }
+
+    .fa-solid:hover {
+        background-color: rgb(107, 103, 103);
+        color: white;
+
+       
+
+    }
+    .fa-play{
+        background: black;
+    color: white;
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    .fa-pause{
+        background: black;
+    color: white;
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    .fa-play:hover{
+        background-color: white;
+        color: black;
+        box-shadow: 5px 5px 5px black;
+    }
+    .anim{
+        animation: rotatePlayer 3s linear infinite;
+    }
+    @keyframes rotatePlayer {
+        from{
+            transform: rotate(0deg);
+        }
+        to{
+            transform: rotate(360deg);
+        }
+    }
+</style>
+
+<body>
+    <main>
+        <div class="music-body">
+            <div class="image">
+                <img src="Images/music.png" alt="">
+
+            </div>
+            <h2 id="artist" style="margin-top:50px ;">Artist_Name</h2>
+
+            <h2 id="title">Title_Name</h2>
+             <audio src="songs/song (1).mp3"></audio>
+            <div class="music-control-btn">
+                <i class="fa-solid fa-backward" id="prev" title="previous"></i>
+                <i class="fa-solid fa-play" id="play" title="play"></i>
+                <i class="fa-solid fa-forward" id="next" title="next"></i>
+            </div>
+        </div>
+    </main>
+    <script src="music.js"></script>
+</body>
+
+</html>
